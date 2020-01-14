@@ -13,13 +13,3 @@
 
     // Defines database
     const db = firebase.firestore();
-
-    console.log('firestore started');
-
-    db.collection('trains').get()
-    .then((snapshot) => {
-        snapshot.forEach((doc) =>{
-            console.log(doc.id, '=>', doc.data())
-        })
-    });
-   
